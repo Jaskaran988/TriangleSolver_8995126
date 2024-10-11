@@ -118,5 +118,77 @@ namespace TriangleTest
             string result = Triangle.AnalyzeTriangle(side1, side2, side3);
             Assert.That(result, Is.EqualTo(expected));
         }
+
+        // 10. Zero Length for Side1
+        [Test]
+        public void InvalidTriangle_Input0and13and13_OutputInvalidTriangle_ZeroLengthSide1()
+        {
+            int side1 = 0;
+            int side2 = 13;
+            int side3 = 13;
+            string expected = "Invalid Triangle - a zero has been detected";
+            string result = Triangle.AnalyzeTriangle(side1, side2, side3);
+            Assert.That(result, Is.EqualTo(expected));
+        }
+
+        // 11. Zero Length for Side2
+        [Test]
+        public void InvalidTriangle_Input19and0and19_OutputInvalidTriangle_ZeroLengthSide2()
+        {
+            int side1 = 19;
+            int side2 = 0;
+            int side3 = 19;
+            string expected = "Invalid Triangle - a zero has been detected";
+            string result = Triangle.AnalyzeTriangle(side1, side2, side3);
+            Assert.That(result, Is.EqualTo(expected));
+        }
+
+        // 12. Zero Length for Side3
+        [Test]
+        public void InvalidTriangle_Input34and34and0_OutputInvalidTriangle_ZeroLengthSide3()
+        {
+            int side1 = 34;
+            int side2 = 34;
+            int side3 = 0;
+            string expected = "Invalid Triangle - a zero has been detected";
+            string result = Triangle.AnalyzeTriangle(side1, side2, side3);
+            Assert.That(result, Is.EqualTo(expected));
+        }
+
+        // 13. Invalid Triangle - Sum of two sides not greater than the third
+        [Test]
+        public void InvalidTriangle_Input15and15and32_OutputInvalidTriangle_SumOfSides()
+        {
+            int side1 = 15;
+            int side2 = 15;
+            int side3 = 32;
+            string expected = "INVALID!!";
+            string result = Triangle.AnalyzeTriangle(side1, side2, side3);
+            Assert.That(result, Is.EqualTo(expected));
+        }
+
+        // 14. Invalid Triangle - Negative side
+        [Test]
+        public void InvalidTriangle_InputNeg13and6and7_OutputInvalidTriangle_NegativeSide()
+        {
+            int side1 = -13;
+            int side2 = 6;
+            int side3 = 7;
+            string expected = "INVALID!!";
+            string result = Triangle.AnalyzeTriangle(side1, side2, side3);
+            Assert.That(result, Is.EqualTo(expected));
+        }
+
+        // 15. Invalid Triangle - All sides zero
+        [Test]
+        public void InvalidTriangle_Input0and0and0_OutputInvalidTriangle_AllSidesZero()
+        {
+            int side1 = 0;
+            int side2 = 0;
+            int side3 = 0;
+            string expected = "Invalid Triangle - a zero has been detected";
+            string result = Triangle.AnalyzeTriangle(side1, side2, side3);
+            Assert.That(result, Is.EqualTo(expected));
+        }
     }
 }
