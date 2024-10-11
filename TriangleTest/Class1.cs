@@ -62,5 +62,65 @@ namespace TriangleTest
             string result = Triangle.AnalyzeTriangle(side1, side2, side3);
             Assert.That(result, Is.EqualTo(expected));
         }
+        // 5. Valid Scalene Triangle (case 1)
+        [Test]
+        public void AnalyzeTriangle_Scalene_ShouldReturnScalene_Case1()
+        {
+            int side1 = 3;
+            int side2 = 4;
+            int side3 = 5;
+            string expected = "Scalene triangle";
+            string result = Triangle.AnalyzeTriangle(side1, side2, side3);
+            Assert.That(result, Is.EqualTo(expected));
+        }
+
+        // 6. Valid Scalene Triangle (case 2)
+        [Test]
+        public void AnalyzeTriangle_Scalene_ShouldReturnScalene_Case2()
+        {
+            int side1 = 7;
+            int side2 = 8;
+            int side3 = 5;
+            string expected = "Scalene triangle";
+            string result = Triangle.AnalyzeTriangle(side1, side2, side3);
+            Assert.That(result, Is.EqualTo(expected));
+        }
+
+        // 7. Valid Scalene Triangle (case 3)
+        [Test]
+        public void AnalyzeTriangle_Scalene_ShouldReturnScalene_Case3()
+        {
+            int side1 = 9;
+            int side2 = 12;
+            int side3 = 15;
+            string expected = "Scalene triangle";
+            string result = Triangle.AnalyzeTriangle(side1, side2, side3);
+            Assert.That(result, Is.EqualTo(expected));
+        }
+
+        // 8. Valid Scalene Triangle (case 4)
+        [Test]
+        public void AnalyzeTriangle_Scalene_ShouldReturnScalene_Case4()
+        {
+            int side1 = 10;
+            int side2 = 11;
+            int side3 = 12;
+            string expected = "Scalene triangle";
+            string result = Triangle.AnalyzeTriangle(side1, side2, side3);
+            Assert.That(result, Is.EqualTo(expected));
+        }
+
+        // 9. Valid Scalene Triangle (case 5)
+        [Test]
+        public void AnalyzeTriangle_Scalene_ShouldReturnScalene_Case5()
+        {
+            int side1 = 13;
+            int side2 = 14;
+            int side3 = 15;
+            string expected = "Scalene triangle";
+            string result = Triangle.AnalyzeTriangle(side1, side2, side3);
+            Assert.That(result, Is.EqualTo(expected));
+        }
+
     }
     }
